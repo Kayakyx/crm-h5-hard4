@@ -1,0 +1,59 @@
+@charset "utf-8";
+
+ /*webapp重置样式*/
+
+body, div, p, ul, ol, dl, li, dt, dd, a, img, h1, h2, h3, h4, h5, h6, form, input, textarea {
+	margin: 0;
+	padding: 0;
+}
+
+ * {
+ 	box-sizing: border-box;
+ }
+/*----------------是否采用rem布局----------------------------------------------------*/
+
+html{
+	/*这里是以750的设计稿来计算的 vw 值, 640的情况见 README.md 文件*/
+	/*这样设计稿中的尺寸   稿尺寸/ 2 / 100 = rem 值*/
+	/*font-size: 26.667vw;*/
+	/*这样设计稿上的    设计稿尺寸 / 100 = rem */
+	font-size: 13.333vw; /*750px设计稿，如果是650px设计稿，写font-size: 15.625vw*/
+
+}
+
+/*通过媒体查询的方式限制无线放大， 当屏幕宽度大于设计稿尺寸的时候保持font-size: 100px,
+ 如果你想一直放大，就把这段代码去掉*/
+@media screen and (min-width: 750px) { /*根据设计稿尺寸写,750px 或 640px*/
+	html {
+		font-size: 100px;
+	}
+}
+
+/*重新设回浏览器的默认字体大小 16px*/
+body{
+	font-size: 16px;
+}
+
+/*----------------是否采用rem布局-END------------------------------------------------*/
+
+ html,body {
+ 	width: 100%;
+ 	height: 100%;
+ }
+
+ body{
+	 overflow: hidden;
+ }
+
+ul, ol, li, dl, dt, dd {
+	list-style: none;
+}
+
+img {
+	display: block;
+}
+
+a {
+	text-decoration: underline;
+}
+
